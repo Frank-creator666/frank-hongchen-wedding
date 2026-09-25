@@ -1,11 +1,14 @@
 <!doctype html>
-<!-- Frank & Hongchen Wedding Website v3 · Conditional invitation fields updated 2026-09-25 -->
+<!-- Frank & Hongchen Wedding Website v4 · Editorial × Minimal Luxury · 2026-09-25 -->
 <html lang="zh-Hant">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <meta name="theme-color" content="#f4efe7" />
+  <meta name="theme-color" content="#f6f1e9" />
   <meta name="description" content="Frank & Hongchen Wedding — 2027.02.21 at Hotel Nikko Kaohsiung" />
+  <meta property="og:title" content="Frank & Hongchen — Wedding Invitation" />
+  <meta property="og:description" content="2027.02.21 · Hotel Nikko Kaohsiung" />
+  <meta property="og:image" content="hero.webp" />
   <title>Frank & Hongchen — Wedding Invitation</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -17,8 +20,9 @@
   <header class="hero" id="top" aria-label="Wedding invitation cover">
     <img class="hero__image" src="hero.webp" alt="Frank 與 Hongchen 在夕陽海岸旅行時的合照" fetchpriority="high" />
     <div class="hero__shade"></div>
-    <nav class="nav" aria-label="主要導覽">
-      <a class="nav__brand" href="#top">F&nbsp;&amp;&nbsp;H</a>
+
+    <nav class="nav" id="site-nav" aria-label="主要導覽">
+      <a class="nav__brand" href="#top" aria-label="回到首頁">F&nbsp;&amp;&nbsp;H</a>
       <div class="nav__links">
         <a href="#details">Details</a>
         <a href="#venue">Venue</a>
@@ -27,29 +31,37 @@
     </nav>
 
     <div class="hero__content reveal">
-      <p class="eyebrow">WE ARE GETTING MARRIED</p>
-      <h1><span>Frank</span><em>&amp;</em><span>Hongchen</span></h1>
+      <p class="eyebrow hero__eyebrow">WE ARE GETTING MARRIED</p>
+      <h1 class="hero__names"><span>Frank</span><em>&amp;</em><span>Hongchen</span></h1>
       <p class="hero__tagline">Together, from this day forward.</p>
       <div class="hero__meta" aria-label="Wedding date and location">
         <span>FEBRUARY 21, 2027</span>
         <span class="dot">•</span>
         <span>KAOHSIUNG</span>
       </div>
-      <a class="scroll-cue" href="#details" aria-label="向下瀏覽婚禮資訊"><span></span></a>
+      <div class="hero__actions">
+        <a class="button button--hero" href="#rsvp">回覆出席 RSVP</a>
+      </div>
     </div>
+
+    <a class="scroll-cue" href="#intro" aria-label="向下瀏覽婚禮資訊">
+      <span></span><small>SCROLL</small>
+    </a>
   </header>
 
   <main>
-    <section class="intro section reveal">
-      <p class="eyebrow ink">OUR DAY</p>
+    <section class="intro section reveal" id="intro">
+      <div class="section-kicker"><span>01</span><i></i><span>OUR DAY</span></div>
+      <p class="intro__lead">A new chapter, together.</p>
       <h2 class="display">蕭文暐 <span>×</span> 陳虹蓁</h2>
       <p class="intro__copy">從今以後，一起走向每一個日常。</p>
     </section>
 
     <section class="countdown section section--sand reveal" aria-labelledby="countdown-title">
       <div class="section__head">
-        <p class="eyebrow ink">COUNTING DOWN</p>
+        <div class="section-kicker section-kicker--center"><span>02</span><i></i><span>COUNTING DOWN</span></div>
         <h2 id="countdown-title">距離我們的大日子</h2>
+        <p>Until we say “I do.”</p>
       </div>
       <div class="countdown__grid" aria-live="polite">
         <div><strong id="days">000</strong><span>DAYS</span></div>
@@ -61,53 +73,63 @@
 
     <section class="details section reveal" id="details">
       <div class="section__head">
-        <p class="eyebrow ink">SAVE THE DATE</p>
+        <div class="section-kicker section-kicker--center"><span>03</span><i></i><span>SAVE THE DATE</span></div>
         <h2>Wedding Celebration</h2>
       </div>
 
       <div class="details__layout">
-        <article class="date-card">
+        <article class="date-card" aria-label="婚禮日期 2027年2月21日星期日">
           <span class="date-card__year">2027</span>
-          <span class="date-card__month">FEB</span>
+          <span class="date-card__month">FEBRUARY</span>
           <strong>21</strong>
           <span class="date-card__day">SUNDAY</span>
         </article>
 
-        <div class="timeline">
-          <div class="timeline__item">
-            <span class="timeline__time">11:30</span>
-            <div>
-              <h3>迎賓接待</h3>
-              <p>Reception</p>
+        <div class="schedule-card">
+          <p class="schedule-card__caption">Sunday · February 21 · Kaohsiung</p>
+          <div class="timeline">
+            <div class="timeline__item">
+              <span class="timeline__time">11:30</span>
+              <div>
+                <h3>迎賓接待</h3>
+                <p>Reception</p>
+              </div>
+            </div>
+            <div class="timeline__item">
+              <span class="timeline__time">12:00</span>
+              <div>
+                <h3>婚宴開始</h3>
+                <p>Banquet</p>
+              </div>
             </div>
           </div>
-          <div class="timeline__item">
-            <span class="timeline__time">12:00</span>
-            <div>
-              <h3>婚宴開始</h3>
-              <p>Banquet</p>
-            </div>
-          </div>
+          <a class="text-link" id="calendar-link" href="frank-hongchen-wedding.ics" download>＋ 加入行事曆</a>
         </div>
       </div>
     </section>
 
     <section class="venue section section--deep reveal" id="venue">
       <div class="venue__content">
-        <p class="eyebrow">VENUE</p>
-        <h2>Hotel Nikko Kaohsiung</h2>
+        <div class="section-kicker section-kicker--light section-kicker--center"><span>04</span><i></i><span>VENUE</span></div>
+        <p class="venue__pretitle">Wedding Banquet</p>
+        <h2>Hotel Nikko<br>Kaohsiung</h2>
         <p class="venue__zh">高雄日航酒店・3F 宴會廳</p>
-        <p class="venue__address">高雄市前鎮區林森四路 268 號</p>
-        <a class="button button--light" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=%E9%AB%98%E9%9B%84%E6%97%A5%E8%88%AA%E9%85%92%E5%BA%97%20Hotel%20Nikko%20Kaohsiung%20%E9%AB%98%E9%9B%84%E5%B8%82%E5%89%8D%E9%8E%AE%E5%8D%80%E6%9E%97%E6%A3%AE%E5%9B%9B%E8%B7%AF268%E8%99%9F">開啟 Google 地圖</a>
+        <p class="venue__address" id="venue-address">高雄市前鎮區林森四路 268 號</p>
+        <div class="venue__actions">
+          <a class="button button--light" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=%E9%AB%98%E9%9B%84%E6%97%A5%E8%88%AA%E9%85%92%E5%BA%97%20Hotel%20Nikko%20Kaohsiung%20%E9%AB%98%E9%9B%84%E5%B8%82%E5%89%8D%E9%8E%AE%E5%8D%80%E6%9E%97%E6%A3%AE%E5%9B%9B%E8%B7%AF268%E8%99%9F">開啟 Google 地圖</a>
+          <button class="button button--ghost" id="copy-address" type="button">複製地址</button>
+        </div>
+        <p class="copy-feedback" id="copy-feedback" role="status" aria-live="polite"></p>
       </div>
       <div class="venue__ornament" aria-hidden="true">21</div>
     </section>
 
     <section class="rsvp section reveal" id="rsvp">
-      <div class="section__head">
-        <p class="eyebrow ink">RSVP</p>
+      <div class="section__head rsvp__head">
+        <div class="section-kicker section-kicker--center"><span>05</span><i></i><span>RSVP</span></div>
         <h2>期待與你相見</h2>
-        <p>請於 <strong>2026.11.30</strong> 前回覆出席資訊。</p>
+        <p class="rsvp__intro">請於 <strong>2026.11.30</strong> 前回覆出席資訊。</p>
+        <span class="deadline-pill">REPLY BY NOV 30, 2026</span>
       </div>
 
       <form class="rsvp-form" id="rsvp-form"
@@ -115,7 +137,7 @@
             method="POST" target="hidden_iframe" novalidate>
 
         <fieldset class="form-section">
-          <legend>About you</legend>
+          <legend><span class="form-step">01</span><span>About you<small>賓客資訊</small></span></legend>
 
           <label class="field field--full">
             <span>您的大名 <b>*</b></span>
@@ -138,57 +160,60 @@
         </fieldset>
 
         <fieldset class="form-section">
-          <legend>Attendance</legend>
+          <legend><span class="form-step">02</span><span>Attendance<small>出席資訊</small></span></legend>
           <div class="field field--full">
             <span>這一天，你會來和我們一起慶祝嗎？ <b>*</b></span>
-            <div class="choice-grid choice-grid--2">
-              <label class="choice choice--large"><input type="radio" name="entry.579093535" value="會出席" required data-attendance="yes"><span>♡ 當然會，我們婚禮見</span></label>
-              <label class="choice choice--large"><input type="radio" name="entry.579093535" value="很遺憾無法出席" data-attendance="no"><span>很可惜這次無法到場</span></label>
+            <div class="choice-grid choice-grid--2 attendance-choice">
+              <label class="choice choice--large"><input type="radio" name="entry.579093535" value="會出席" required data-attendance="yes"><span><b>YES</b><small>當然會，我們婚禮見</small></span></label>
+              <label class="choice choice--large"><input type="radio" name="entry.579093535" value="很遺憾無法出席" data-attendance="no"><span><b>NO</b><small>很可惜這次無法到場</small></span></label>
             </div>
           </div>
 
           <div id="attending-fields" class="attending-fields" hidden>
-            <div class="field field--full">
-              <span>包含您本人，共有幾位出席？ <b>*</b></span>
-              <div class="choice-grid choice-grid--4 compact">
-                <label class="choice"><input type="radio" name="entry.728428873" value="1"><span>1</span></label>
-                <label class="choice"><input type="radio" name="entry.728428873" value="2"><span>2</span></label>
-                <label class="choice"><input type="radio" name="entry.728428873" value="3"><span>3</span></label>
-                <label class="choice"><input type="radio" name="entry.728428873" value="4"><span>4</span></label>
+            <div class="attending-fields__inner">
+              <div class="field field--full">
+                <span>包含您本人，共有幾位出席？ <b>*</b></span>
+                <div class="choice-grid choice-grid--4 compact number-choice">
+                  <label class="choice"><input type="radio" name="entry.728428873" value="1"><span>1</span></label>
+                  <label class="choice"><input type="radio" name="entry.728428873" value="2"><span>2</span></label>
+                  <label class="choice"><input type="radio" name="entry.728428873" value="3"><span>3</span></label>
+                  <label class="choice"><input type="radio" name="entry.728428873" value="4"><span>4</span></label>
+                </div>
               </div>
-            </div>
 
-            <div class="field field--full">
-              <span>如有兒童座椅需求，請選擇數量 <small>（選填，無需求可略過）</small></span>
-              <div class="choice-grid choice-grid--2 compact">
-                <label class="choice"><input type="radio" name="entry.690583584" value="1"><span>1 張</span></label>
-                <label class="choice"><input type="radio" name="entry.690583584" value="2"><span>2 張</span></label>
+              <div class="field field--full">
+                <span>兒童座椅 <small>（選填，無需求可略過）</small></span>
+                <div class="choice-grid choice-grid--2 compact">
+                  <label class="choice"><input type="radio" name="entry.690583584" value="1"><span>1 張</span></label>
+                  <label class="choice"><input type="radio" name="entry.690583584" value="2"><span>2 張</span></label>
+                </div>
+                <button class="clear-radio" type="button" data-clear="entry.690583584">清除兒童座椅選擇</button>
               </div>
-              <button class="clear-radio" type="button" data-clear="entry.690583584">清除兒童座椅選擇</button>
-            </div>
 
-            <div class="field field--full">
-              <span>飲食需求 <b>*</b></span>
-              <div class="choice-grid choice-grid--2 compact">
-                <label class="choice"><input type="radio" name="entry.607079424" value="葷食"><span>葷食</span></label>
-                <label class="choice"><input type="radio" name="entry.607079424" value="素食"><span>素食</span></label>
+              <div class="field field--full">
+                <span>飲食需求 <b>*</b></span>
+                <div class="choice-grid choice-grid--2 compact">
+                  <label class="choice"><input type="radio" name="entry.607079424" value="葷食"><span>葷食</span></label>
+                  <label class="choice"><input type="radio" name="entry.607079424" value="素食"><span>素食</span></label>
+                </div>
               </div>
-            </div>
 
-            <div class="field field--full">
-              <span>電子喜帖 Email <b>*</b></span>
-              <input type="email" name="entry.660573787" autocomplete="email" placeholder="name@example.com" />
-            </div>
+              <label class="field field--full">
+                <span>電子喜帖 Email <b>*</b></span>
+                <input type="email" name="entry.660573787" autocomplete="email" inputmode="email" placeholder="name@example.com" />
+                <small class="field-help">電子喜帖將寄送至此信箱。</small>
+              </label>
 
-            <div class="field field--full">
-              <span>紙本喜帖寄送地址 <small>（選填，如需紙本喜帖再填寫）</small></span>
-              <input type="text" name="entry.538163172" autocomplete="street-address" placeholder="請輸入完整地址" />
+              <label class="field field--full">
+                <span>紙本喜帖寄送地址 <small>（選填）</small></span>
+                <input type="text" name="entry.538163172" autocomplete="street-address" placeholder="如需紙本喜帖，請輸入完整地址" />
+              </label>
             </div>
           </div>
         </fieldset>
 
         <fieldset class="form-section">
-          <legend>Message</legend>
+          <legend><span class="form-step">03</span><span>Message<small>給我們的話</small></span></legend>
           <label class="field field--full">
             <span>想對我們說的話 <small>（選填）</small></span>
             <textarea name="entry.124137914" rows="4" placeholder="留下給我們的祝福吧"></textarea>
@@ -196,13 +221,14 @@
         </fieldset>
 
         <p class="form-error" id="form-error" role="alert" hidden></p>
-        <button class="button button--submit" type="submit" id="submit-button">送出 RSVP</button>
+        <button class="button button--submit" type="submit" id="submit-button"><span>送出 RSVP</span><span aria-hidden="true">→</span></button>
         <p class="privacy-note">送出後，資料將記錄於新人建立的 Google Form。</p>
       </form>
 
       <div class="success-card" id="success-card" hidden tabindex="-1">
         <p class="eyebrow ink">THANK YOU</p>
-        <h3>回覆已送出 ♡</h3>
+        <div class="success-card__mark" aria-hidden="true">♡</div>
+        <h3>回覆已送出</h3>
         <p>謝謝你的回覆，我們期待在高雄與你相見。</p>
         <a class="button button--outline" href="#top">回到首頁</a>
       </div>
@@ -215,6 +241,11 @@
     <span>F &amp; H</span>
     <p>Frank &amp; Hongchen · 2027.02.21 · Kaohsiung</p>
   </footer>
+
+  <div class="mobile-rsvp-bar" id="mobile-rsvp-bar" aria-hidden="true">
+    <div><small>FEB 21, 2027</small><span>Frank & Hongchen</span></div>
+    <a href="#rsvp">RSVP</a>
+  </div>
 
   <script src="script.js"></script>
 </body>
