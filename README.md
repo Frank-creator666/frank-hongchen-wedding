@@ -1,3 +1,5 @@
+# Frank & Hongchen Wedding Website v6
+
 # Frank & Hongchen Wedding Website v4
 
 Wedding date: 2027-02-21  
@@ -53,3 +55,10 @@ GitHub Pages 保持：Settings → Pages → Deploy from a branch → `main` →
 - Invitation email: `entry.660573787`
 - Paper invitation address: `entry.538163172`
 - Message: `entry.124137914`
+
+
+## v6 視覺調整
+- 首頁文案拆成天空區與下半身區，避開新人臉部與上半身。
+- Countdown 英文副標改用 Cormorant Garamond italic。
+- 放大 Countdown 數字與單位，提升四格視覺份量。
+- RSVP 選項改為更細緻的膠囊／卡片造型，送出按鈕改為精品感圓角按鈕。
